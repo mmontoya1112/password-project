@@ -10,26 +10,30 @@ var numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 // Write password to the #password input
 function writePassword() {
    var truePrompts = prompts();
+   var passwordText = document.querySelector("#password");
+
    if(truePrompts) {
-    var password = generatePassword();
-    var passwordText = document.querySelector("#password");
-  
-    passwordText.value = password;
-   }
+    var newPassword = generatePassword();
+    passwordText.value = newPassword;
+   } else {
+    passwordText.value = "";
+   };
 
   // var password = generatePassword();
   // var passwordText = document.querySelector("#password");
 
   // passwordText.value = password;
 
-}
+};
 
 function generatePassword(){
   var password = "";
   for(var i = 0; i < passwordLength; i++) {
-    var randomLetter =
-  }
-}
+    var randomLetter = Math.floor(Math.random() * choice.length);
+    password = password + choice[randomLetter];
+  };
+  return password;
+};
 
 function prompts(){
   choice = [];
