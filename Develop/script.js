@@ -19,11 +19,6 @@ function writePassword() {
     passwordText.value = "";
    };
 
-  // var password = generatePassword();
-  // var passwordText = document.querySelector("#password");
-
-  // passwordText.value = password;
-
 };
 
 function generatePassword(){
